@@ -1,0 +1,203 @@
+/* iOS Cordova Tweak */
+.device-cordova.device-ios {
+  height: 100vh;
+}
+
+/* Your app custom styles here */
+
+.centered-container{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+}
+/* Add this CSS to your stylesheet */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:50px;
+}
+#barcode-scanner {
+  position: relative;
+}
+
+#video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+#canvas {
+  display: none; /* You can hide the canvas, as it's used for capturing frames */
+}
+
+/* barcode container */
+
+.scan-rectangle {
+    	
+	padding: 25px 30px;
+	transition: transform .6s ease-out;
+  position: absolute;
+  width: 200px; /* Adjust the width of the rectangle */
+  height: 200px; /* Adjust the height of the rectangle */
+  top: 50%; /* Position the rectangle vertically in the middle */
+  left: 50%; /* Position the rectangle horizontally in the middle */
+  transform: translate(-50%, -50%); 
+}
+
+.corner {
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  
+	
+	border-color: white; 
+	border-style: solid;
+	content: ' ';
+}
+
+.top-left {
+top: 0; left: 0;
+	border-width: 4px 0 0 4px;
+    width: 10%; height: 9%;
+	border-color: rgba(34, 33, 33, 0.41); 
+	border-style: solid;
+}
+
+.top-right {
+ top: 0; right: 0;
+	border-width: 4px 4px 0 0;
+    width: 10%; height: 9%;
+	border-color: rgba(34, 33, 33, 0.41); 
+	border-style: solid;
+}
+
+.bottom-left {
+	bottom: 0; left: 0;
+	border-width: 0 0 4px 4px;
+    width: 10%; height: 9%;
+	border-color: rgba(34, 33, 33, 0.41); 
+	border-style: solid;
+}
+
+.bottom-right {
+  	bottom: 0; right: 0;
+	border-width: 0 4px 4px 0;
+    width: 10%; height: 9%;
+	border-color: rgba(34, 33, 33, 0.41); 
+	border-style: solid;
+}
+
+/* Mobile-specific styles for the scan rectangle (iPhone and iPad portrait mode) */
+@media (max-width: 768px) {
+  .scan-rectangle {
+   /* Change border color for mobile devices */
+    width: 200px; /* Adjust the width for mobile */
+    height: 200px; /* Adjust the height for mobile */
+  }
+}
+
+/* Tablet-specific styles for the scan rectangle (iPad portrait mode) */
+@media (min-width: 768px) and (max-width: 2048px) and (orientation: portrait) {
+  .scan-rectangle {
+   /* Change border color for tablets */
+    width: 530px; /* Adjust the width for tablets */
+    height: 530px; /* Adjust the height for tablets */
+  }
+  
+.corner {
+  position: absolute;
+  width: 5px;
+  height: 20px;  
+	border-color: white; 
+	border-style: solid;
+	content: ' ';
+}
+
+.top-left {
+top: 0; left: 0;
+	border-width: 5px 0 0 5px;
+    width: 10%; height: 9%;
+	border-color: rgba(34, 33, 33, 0.41); 
+	border-style: solid;
+}
+
+.top-right {
+ top: 0; right: 0;
+	border-width: 5px 5px 0 0;
+    width: 10%; height: 9%;
+	border-color: rgba(34, 33, 33, 0.41); 
+	border-style: solid;
+}
+
+.bottom-left {
+	bottom: 0; left: 0;
+	border-width: 0 0 5px 5px;
+    width: 10%; height: 9%;
+	border-color: rgba(34, 33, 33, 0.41); 
+	border-style: solid;
+}
+
+.bottom-right {
+  	bottom: 0; right: 0;
+	border-width: 0 5px 5px 0;
+    width: 10%; height: 9%;
+	border-color: rgba(34, 33, 33, 0.41); 
+	border-style: solid;
+}
+}
+
+/* Mobile-specific styles for the scan rectangle (iPhone landscape mode) */
+@media (max-width: 2048px) and (orientation: landscape) {
+  .scan-rectangle {
+     /* Change border color for mobile devices */
+    width: 800px; /* Adjust the width for mobile */
+    height: 600px; /* Adjust the height for mobile */
+  }
+  
+.corner {
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  
+	
+	border-color: white; 
+	border-style: solid;
+	content: ' ';
+}
+
+.top-left {
+top: 0; left: 0;
+	border-width: 5px 0 0 5px;
+    width: 10%; height: 9%;
+	border-color: rgba(34, 33, 33, 0.41); 
+	border-style: solid;
+}
+
+.top-right {
+ top: 0; right: 0;
+	border-width: 5px 5px 0 0;
+    width: 10%; height: 9%;
+	border-color: rgba(34, 33, 33, 0.41); 
+	border-style: solid;
+}
+
+.bottom-left {
+	bottom: 0; left: 0;
+	border-width: 0 0 5px 5px;
+    width: 10%; height: 9%;
+	border-color: rgba(34, 33, 33, 0.41); 
+	border-style: solid;
+}
+
+.bottom-right {
+  	bottom: 0; right: 0;
+	border-width: 0 5px 5px 0;
+    width: 10%; height: 9%;
+	border-color: rgba(34, 33, 33, 0.41); 
+	border-style: solid;
+}
+}
+
